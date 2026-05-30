@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3255429218029316716}
   - component: {fileID: 4980906635380542859}
   - component: {fileID: -6508356262004989983}
-  - component: {fileID: 2548882394297536748}
+  - component: {fileID: -6357542789776644230}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -186,8 +186,8 @@ Transform:
   m_GameObject: {fileID: 8166702822236204460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51943, y: 1.55, z: 3.1536}
-  m_LocalScale: {x: 1, y: 1.4925, z: 1}
+  m_LocalPosition: {x: 2.5194, y: 2.3289, z: 3.1536}
+  m_LocalScale: {x: 0.2, y: 0.3, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3295350191837556131}
@@ -285,10 +285,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a6a88e61866ac49a38538f4cee2cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  walkSpeed: 4
-  sprintSpeed: 14
-  maxVelocityChange: 10
-  jumpHeight: 1.5
+  walkSpeed: 2
+  sprintSpeed: 4
+  maxVelocityChange: 7
+  jumpHeight: 2
 --- !u!54 &5061456213039822686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -400,8 +400,8 @@ MonoBehaviour:
   mainCamera: {fileID: 2598359382991157040}
   mouseXPlay: {fileID: 797880874336241897}
   mouseYCam: {fileID: 6915365028635498025}
---- !u!136 &2548882394297536748
-CapsuleCollider:
+--- !u!135 &-6357542789776644230
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -416,10 +416,8 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.0000002
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Radius: 0.38
+  m_Center: {x: 0, y: -0.73, z: 0}

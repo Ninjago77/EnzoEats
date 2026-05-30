@@ -13,6 +13,6 @@ public class MouseXPlay : MonoBehaviour
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * personalSettings.MouseXSensitivity * Time.deltaTime;
-        transform.Rotate(Vector3.up * mouseX, Space.World); // <-- Add Space.World
+        transform.Rotate(Vector3.up * mouseX, Space.Self); // <-- Do not Add Space.World
     }
 }
