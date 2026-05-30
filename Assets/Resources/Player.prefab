@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 3255429218029316716}
   - component: {fileID: 4980906635380542859}
   - component: {fileID: -6508356262004989983}
+  - component: {fileID: 2548882394297536748}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -285,7 +286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   walkSpeed: 4
+  sprintSpeed: 14
   maxVelocityChange: 10
+  jumpHeight: 1.5
 --- !u!54 &5061456213039822686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -397,3 +400,26 @@ MonoBehaviour:
   mainCamera: {fileID: 2598359382991157040}
   mouseXPlay: {fileID: 797880874336241897}
   mouseYCam: {fileID: 6915365028635498025}
+--- !u!136 &2548882394297536748
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166702822236204460}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.0000002
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
