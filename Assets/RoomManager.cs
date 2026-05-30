@@ -1,5 +1,6 @@
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -29,7 +30,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         Debug.Log("P/Joined Lobby");
 
-        PhotonNetwork.JoinOrCreateRoom("test", null, null, null);
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.PublishUserId = true;
+
+        PhotonNetwork.JoinOrCreateRoom("test", roomOptions, null, null);
 
     }
 

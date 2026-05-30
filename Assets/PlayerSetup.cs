@@ -1,3 +1,6 @@
+using System;
+using System.Security.Cryptography;
+using System.Text;
 using Photon.Pun;
 using UnityEngine;
 
@@ -7,6 +10,7 @@ public class PlayerSetup : MonoBehaviour
     public GameObject mainCamera;
     public MouseXPlay mouseXPlay;
     public MouseYCam mouseYCam;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //public void YesLocalPlayer()
     //{
@@ -18,6 +22,7 @@ public class PlayerSetup : MonoBehaviour
 
     void Start()
     {
+
         // 3. Check if this specific player object belongs to the person running the game
         if (GetComponent<PhotonView>().IsMine)
         {
@@ -36,4 +41,5 @@ public class PlayerSetup : MonoBehaviour
             mainCamera.SetActive(false);
         }
     }
+
 }
