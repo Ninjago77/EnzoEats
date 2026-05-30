@@ -3,6 +3,8 @@ using Photon.Pun;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
+    public GameObject player;
+    public Transform spawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,8 +27,20 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
+        Debug.Log("P/Joined Lobby");
+
         PhotonNetwork.JoinOrCreateRoom("test", null, null, null);
 
+    }
+
+    public override void OnJoinedRoom()
+    {
+        base.OnJoinedRoom();
+
         Debug.Log("P/Inside a Room");
+
+        GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+
+        //_player.GetComponent<PlayerSetup>().YesLocalPlayer();
     }
 }
