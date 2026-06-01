@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9198293500564736953}
   - component: {fileID: 6338289426857084666}
   - component: {fileID: 8228115947271139853}
-  - component: {fileID: 5831229478807246517}
+  - component: {fileID: 3343652578702641350}
   m_Layer: 0
   m_Name: Food
   m_TagString: Food
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
---- !u!114 &5831229478807246517
+--- !u!114 &3343652578702641350
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,6 +128,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2424156088511466196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baac24626b98bf2439f1f597e4db4e22, type: 3}
+  m_Script: {fileID: 11500000, guid: 562fd742c25862e499690fa619be38f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
