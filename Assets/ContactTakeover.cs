@@ -36,7 +36,7 @@ public class ContactTakeover : MonoBehaviour, IPunOwnershipCallbacks
     //    CheckAndTakeover(other.gameObject);
     //}
 
-    private void CheckAndTakeover(GameObject hittingObject)
+    public void CheckAndTakeover(GameObject hittingObject)
     {
         PhotonView playerView = hittingObject.GetComponent<PhotonView>();
 

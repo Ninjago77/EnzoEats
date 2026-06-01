@@ -22,7 +22,7 @@ public class PlayerSetup : MonoBehaviourPun
 
     void Start()
     {
-        PhotonNetwork.Instantiate("Food", new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
+        //PhotonNetwork.Instantiate("Food", new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
 
         // 3. Check if this specific player object belongs to the person running the game
         if (photonView.IsMine)

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1560705039494584874}
   - component: {fileID: 2292521074954774518}
+  - component: {fileID: 5998880527797965310}
+  - component: {fileID: 5104825033327185970}
   m_Layer: 0
   m_Name: MainHandContainer
   m_TagString: Untagged
@@ -25,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649320091586395294}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.793945, y: -14.68605, z: -15.00805}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.646, y: 0.5239, z: 0.265}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8801038011012903727}
@@ -44,6 +46,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2a06f3c5a2fa742b443c09dfa61067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &5998880527797965310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649320091586395294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01aed72ece24c95459a63212caef99d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sphereCollider: {fileID: 5104825033327185970}
+  contactTakeover: {fileID: 4620758711753942542}
+  pickedUpObject: {fileID: 0}
+--- !u!135 &5104825033327185970
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649320091586395294}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: -0.646, y: 0, z: 0}
 --- !u!1 &2598359382991157040
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +311,7 @@ GameObject:
   - component: {fileID: 8157928606569482355}
   - component: {fileID: 8039190109378928402}
   - component: {fileID: 4259323761913873087}
+  - component: {fileID: 4620758711753942542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -370,7 +409,7 @@ MonoBehaviour:
   walkSpeed: 2
   sprintSpeed: 4
   maxVelocityChange: 7
-  jumpHeight: 2
+  jumpHeight: 1
 --- !u!54 &5061456213039822686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -542,3 +581,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.08, z: 0.61}
   m_Center: {x: 0, y: -0.01, z: 0}
+--- !u!114 &4620758711753942542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166702822236204460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baac24626b98bf2439f1f597e4db4e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ContactTakeover
