@@ -32,7 +32,7 @@ public class SkinSetup : MonoBehaviour
         skinIndex = UnityEngine.Random.Range(0, skinsList.Length);
         skin = Instantiate(skinsList[skinIndex], transform, false);
         skin.transform.localScale = new Vector3(2f, 2f, 2f);
-        skin.transform.localPosition = new Vector3(0, -1, 0);
+        //skin.transform.localPosition = new Vector3(0, -1, 0);
     }
 
     private int convertToNumericSeed(string input)

@@ -4,7 +4,7 @@ using System.Text;
 using Photon.Pun;
 using UnityEngine;
 
-public class PlayerSetup : MonoBehaviour
+public class PlayerSetup : MonoBehaviourPun
 {
     public PlayerMovement playerMovement;
     public GameObject mainCamera;
@@ -22,9 +22,10 @@ public class PlayerSetup : MonoBehaviour
 
     void Start()
     {
+        PhotonNetwork.Instantiate("Food", new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
 
         // 3. Check if this specific player object belongs to the person running the game
-        if (GetComponent<PhotonView>().IsMine)
+        if (photonView.IsMine)
         {
             // This is YOU. Enable controls.
             playerMovement.enabled = true;
