@@ -5,11 +5,11 @@ using Photon.Pun;
 public class FoodNetworkController : MonoBehaviourPun
 {
     [PunRPC]
-    public void NetworkPickUp(int playerViewID)
+    public void NetworkPickUp(int handViewID)
     {
-        // Find the player object across the network via its ID
-        PhotonView playerPV = PhotonView.Find(playerViewID);
-        if (playerPV == null) return;
+        // Find the specific hand object across the network via its ID
+        PhotonView handPV = PhotonView.Find(handViewID);
+        if (handPV == null) return;
 
         // Disable sync components so network updates stop overriding local parenting
         if (TryGetComponent(out PhotonTransformView ptv)) ptv.enabled = false;
@@ -18,6 +18,7 @@ public class FoodNetworkController : MonoBehaviourPun
         if (rb != null)
         {
             rb.isKinematic = true;
+            rb.detectCollisions = false; // Prevents weird physics glitches while held
             rb.Sleep();
         }
 
@@ -26,8 +27,8 @@ public class FoodNetworkController : MonoBehaviourPun
             meshCol.enabled = false;
         }
 
-        // Parent the food item to the specific player who picked it up
-        transform.SetParent(playerPV.transform);
+        // Parent the food item directly to the HAND that picked it up
+        transform.SetParent(handPV.transform);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
     }
@@ -46,6 +47,7 @@ public class FoodNetworkController : MonoBehaviourPun
         if (rb != null)
         {
             rb.isKinematic = false;
+            rb.detectCollisions = true;
             rb.WakeUp();
         }
 

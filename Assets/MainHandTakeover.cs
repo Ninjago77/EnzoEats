@@ -70,14 +70,18 @@ public class MainHandTakeover : MonoBehaviourPun
         pickedUpObject = objectsInRange[0];
         objectsInRange.RemoveAt(0);
 
-        contactTakeover.CheckAndTakeover(pickedUpObject);
-
+        // 1. Take Photon Ownership immediately
         PhotonView targetPV = pickedUpObject.GetComponent<PhotonView>();
         if (targetPV != null)
         {
-            // This calls NetworkPickUp on the Food item's PhotonView script
+            // Request ownership so this client controls its transform variables
+            targetPV.RequestOwnership();
+
+            // 2. Pass our own PhotonView ID so the item knows exactly which HAND picked it up
             targetPV.RPC("NetworkPickUp", RpcTarget.AllBuffered, photonView.ViewID);
         }
+
+        contactTakeover.CheckAndTakeover(pickedUpObject);
     }
 
     private void UpdateObjectsInRange()
