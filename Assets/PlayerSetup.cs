@@ -10,6 +10,7 @@ public class PlayerSetup : MonoBehaviourPun
     public GameObject mainCamera;
     public MouseXPlay mouseXPlay;
     public MouseYCam mouseYCam;
+    public MainHandTakeover mainHandTakeover;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     //public void YesLocalPlayer()
@@ -31,6 +32,7 @@ public class PlayerSetup : MonoBehaviourPun
             playerMovement.enabled = true;
             mouseXPlay.enabled = true;
             mouseYCam.enabled = true;
+            mainHandTakeover.enabled = true;
             mainCamera.SetActive(true);
         }
         else
@@ -39,6 +41,7 @@ public class PlayerSetup : MonoBehaviourPun
             playerMovement.enabled = false;
             mouseXPlay.enabled = false;
             mouseYCam.enabled = false;
+            mainHandTakeover.enabled = false;
             mainCamera.SetActive(false);
         }
     }

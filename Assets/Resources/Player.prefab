@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2a06f3c5a2fa742b443c09dfa61067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  itemsList:
+  - {fileID: 919132149155446097, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
+  - {fileID: 919132149155446097, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+  - {fileID: 919132149155446097, guid: 10bc81f61e0011e46a3b643f11528efe, type: 3}
+  itemIndex: -1
 --- !u!114 &5998880527797965310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,13 +58,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649320091586395294}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01aed72ece24c95459a63212caef99d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   sphereCollider: {fileID: 5104825033327185970}
-  contactTakeover: {fileID: 4620758711753942542}
+  prefabList:
+  - BananaGrenade Variant
+  - HotdogKnife Variant
+  - TomatoBlinder Variant
+  mainHandSetup: {fileID: 2292521074954774518}
   pickedUpObject: {fileID: 0}
 --- !u!135 &5104825033327185970
 SphereCollider:
@@ -311,7 +320,6 @@ GameObject:
   - component: {fileID: 8157928606569482355}
   - component: {fileID: 8039190109378928402}
   - component: {fileID: 4259323761913873087}
-  - component: {fileID: 4620758711753942542}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -521,6 +529,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2598359382991157040}
   mouseXPlay: {fileID: 797880874336241897}
   mouseYCam: {fileID: 6915365028635498025}
+  mainHandTakeover: {fileID: 5998880527797965310}
 --- !u!65 &8157928606569482355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -581,15 +590,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.08, z: 0.61}
   m_Center: {x: 0, y: -0.01, z: 0}
---- !u!114 &4620758711753942542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8166702822236204460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baac24626b98bf2439f1f597e4db4e22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ContactTakeover

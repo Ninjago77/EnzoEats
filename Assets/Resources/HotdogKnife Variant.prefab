@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7644327119265591091, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
+      propertyPath: itemIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9198293500564736953, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
       propertyPath: sceneViewId
       value: 0
@@ -136,10 +140,100 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -6816412245964338566, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104605773280376781}
+    - targetCorrespondingSourceObject: {fileID: 4421609399939004545, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3874709681649050765}
+    - targetCorrespondingSourceObject: {fileID: -4544257593330366127, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1372266240866450387}
   m_SourcePrefab: {fileID: 100100000, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+--- !u!1 &536267134374846963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6816412245964338566, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+  m_PrefabInstance: {fileID: 2744391138877991817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &2104605773280376781
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536267134374846963}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7266992467196484438, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+--- !u!1 &1966594614381581064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4421609399939004545, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+  m_PrefabInstance: {fileID: 2744391138877991817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3874709681649050765
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966594614381581064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7571149746698563964, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
 --- !u!4 &2422004549531208802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
   m_PrefabInstance: {fileID: 2744391138877991817}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7420108065248207576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4544257593330366127, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}
+  m_PrefabInstance: {fileID: 2744391138877991817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1372266240866450387
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420108065248207576}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2015355560292306283, guid: 30e335b4dea807e4a80b7292bd86c7f3, type: 3}

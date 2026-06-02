@@ -59,13 +59,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8803798556126859134, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3821130350867915083}
   m_SourcePrefab: {fileID: 100100000, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
 --- !u!4 &1588300343483960579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
   m_PrefabInstance: {fileID: 1261148367791287016}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7758892807263790486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8803798556126859134, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
+  m_PrefabInstance: {fileID: 1261148367791287016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3821130350867915083
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7758892807263790486}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8457624670379154836, guid: 6d167f3fa953a844298f99a9b456cb8d, type: 3}
 --- !u!1001 &8767169359346467631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,6 +146,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4468730260303687214, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644327119265591091, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
+      propertyPath: itemIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9198293500564736953, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}

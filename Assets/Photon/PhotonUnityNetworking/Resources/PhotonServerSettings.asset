@@ -41,6 +41,10 @@ MonoBehaviour:
   - RespawnSpaceship
   - NetworkDrop
   - NetworkPickUp
+  - RequestDestroyObject
+  - RPC_RequestDestroy
+  - RPC_RequestTargetDestroy
+  - CheckAndTakeover
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
