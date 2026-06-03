@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class MainHandTakeover : MonoBehaviourPun
+public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
 {
     public SphereCollider sphereCollider;
     private List<GameObject> objectsInRange = new List<GameObject>();
@@ -16,7 +16,9 @@ public class MainHandTakeover : MonoBehaviourPun
     public MainHandSetup mainHandSetup;
     public GameObject pickedUpObject;
     //public KillItem killItem;
-
+    // Register callbacks so PUN tells this script when ownership shifts
+    private void OnEnable() => PhotonNetwork.AddCallbackTarget(this);
+    private void OnDisable() => PhotonNetwork.RemoveCallbackTarget(this);
     private void Start()
     {
         resetInv();
@@ -98,44 +100,56 @@ public class MainHandTakeover : MonoBehaviourPun
         objectsInRange.RemoveAt(0);
 
         PhotonView foodView = pickedUpObject.GetComponent<PhotonView>();
+
+        // 2. Write data to custom properties immediately
+        Hashtable props = new Hashtable();
+        props["inventory"] = new int[] { pickedUpObject.GetComponent<FoodSetup>().itemIndex, -1, -1 };
+        PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+
+        // 3. Request ownership. We DO NOT destroy it yet. 
+        // We wait for OnOwnershipTransfered to trigger.
         if (foodView != null && !foodView.IsMine)
         {
             foodView.RequestOwnership();
         }
-
+        else if (foodView != null && foodView.IsMine)
+        {
+            // If we already happen to own it, destroy it immediately safely
+            PhotonNetwork.Destroy(pickedUpObject);
+            pickedUpObject = null;
+        }
         //ContactTakeover contactTakeover = pickedUpObject.GetComponent<ContactTakeover>();
-        foodView.RPC("CheckAndTakeover",photonView.Owner, transform.parent.gameObject, "death");
         //contactTakeover.CheckAndTakeover(transform.parent.gameObject,"death");
 
 
 
-    //    StartCoroutine(pickUpWait());
-    //}
+        //    StartCoroutine(pickUpWait());
+        //}
 
-    //System.Collections.IEnumerator pickUpWait()
-    //{
-    //    float timeout = 3f;
-    //    float elapsed = 0f;
+        //System.Collections.IEnumerator pickUpWait()
+        //{
+        //    float timeout = 3f;
+        //    float elapsed = 0f;
 
-    //    while (pickedUpObject != null &&
-    //           pickedUpObject.GetComponent<PhotonView>()?.Owner?.UserId !=
-    //           photonView?.Owner?.UserId)
-    //    {
-    //        elapsed += Time.deltaTime;
-    //        if (elapsed >= timeout)
-    //        {
-    //            Debug.LogWarning("Pickup timed out - ownership transfer failed");
-    //            pickedUpObject = null;
-    //            yield break;
-    //        }
-    //        yield return null;
-    //    }
+        //    while (pickedUpObject != null &&
+        //           pickedUpObject.GetComponent<PhotonView>()?.Owner?.UserId !=
+        //           photonView?.Owner?.UserId)
+        //    {
+        //        elapsed += Time.deltaTime;
+        //        if (elapsed >= timeout)
+        //        {
+        //            Debug.LogWarning("Pickup timed out - ownership transfer failed");
+        //            pickedUpObject = null;
+        //            yield break;
+        //        }
+        //        yield return null;
+        //    }
 
-    //    if (pickedUpObject == null) yield break;
+        //    if (pickedUpObject == null) yield break;
 
-        Hashtable props = new Hashtable();
-        props["inventory"] = new int[] { pickedUpObject.GetComponent<FoodSetup>().itemIndex, -1, -1 };
-        PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+        //Hashtable props = new Hashtable();
+        //props["inventory"] = new int[] { pickedUpObject.GetComponent<FoodSetup>().itemIndex, -1, -1 };
+        //PhotonNetwork.LocalPlayer.SetCustomProperties(props);
 
         //PhotonNetwork.Destroy(pickedUpObject);
         //pickedUpObject = null;
@@ -185,4 +199,21 @@ public class MainHandTakeover : MonoBehaviourPun
     //}
 
     //public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest) { }
+
+    // --- IPunOwnershipCallbacks Implementation ---
+
+    public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer) { }
+
+    public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
+    {
+        // This checks if the item we are currently trying to pick up 
+        // successfully became ours on the network.
+        if (pickedUpObject != null && targetView == pickedUpObject.GetComponent<PhotonView>() && targetView.IsMine)
+        {
+            PhotonNetwork.Destroy(pickedUpObject);
+            pickedUpObject = null; // Clean up local pointer reference
+        }
+    }
+
+    public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest) { }
 }

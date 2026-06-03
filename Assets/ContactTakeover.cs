@@ -8,7 +8,6 @@ public class ContactTakeover : MonoBehaviour, IPunOwnershipCallbacks
 {
     private PhotonView photonView;
     private Rigidbody rb;
-    private string command;
 
     void Awake()
     {
@@ -29,17 +28,16 @@ public class ContactTakeover : MonoBehaviour, IPunOwnershipCallbacks
 
     private void OnCollisionEnter(Collision collision)
     {
-        CheckAndTakeover(collision.gameObject,"collision");
+        CheckAndTakeover(collision.gameObject);
     }
 
     //private void OnTriggerEnter(Collider other)
     //{
     //    CheckAndTakeover(other.gameObject);
     //}
-    [PunRPC]
-    public void CheckAndTakeover(GameObject hittingObject,string c)
+    //[PunRPC]
+    public void CheckAndTakeover(GameObject hittingObject)
     {
-        command = c;
         PhotonView playerView = hittingObject.GetComponent<PhotonView>();
 
         if (playerView != null && playerView.IsMine)
@@ -65,10 +63,10 @@ public class ContactTakeover : MonoBehaviour, IPunOwnershipCallbacks
         {
             // Enable physics simulation for the new owner, disable it for everyone else
             rb.isKinematic = !photonView.IsMine;
-            if (photonView.IsMine && command == "death")
-            {
-                PhotonNetwork.Destroy(gameObject);
-            }
+            //if (photonView.IsMine && command == "death")
+            //{
+            //    PhotonNetwork.Destroy(gameObject);
+            //}
         }
         
     }
