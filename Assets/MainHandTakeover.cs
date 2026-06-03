@@ -70,6 +70,19 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
                 pickUp();
             }
         }
+
+        if (Input.GetButtonDown("Drop"))
+        {
+            if (((int[])photonView.Owner.CustomProperties["inventory"])[0] != -1)
+            {
+                drop();
+            }
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            ; // HUMAN ME LISTEN TO ME FIRE OR LEFT CLICK HERE
+        }
     }
 
     void drop()

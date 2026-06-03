@@ -5,10 +5,33 @@ using Photon.Realtime;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public GameObject player;
-    public Transform spawnPoint;
+    private Transform spawnPoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public static RoomManager Instance { get; private set; }
+    private void Awake()
+    {
+        // Singleton pattern to prevent duplicates
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy the duplicate
+            return;
+        }
+
+        Instance = this;
+
+        // Keeps this GameObject between scene loads
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void MapLoad()
+    {
+        spawnPoint = GameObject.FindWithTag("SpawnPointTag").transform;
+
+    }
+
     void Start()
     {
+        MapLoad();
         Debug.Log("P/Connecting...");
 
         PhotonNetwork.ConnectUsingSettings();
