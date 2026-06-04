@@ -1,7 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 
-public class FoodSetup : MonoBehaviour
+public class FoodSetup : MonoBehaviourPunCallbacks
 {
     public int itemIndex = -1;
     public float itemDamage = 69f;
@@ -18,4 +18,14 @@ public class FoodSetup : MonoBehaviour
     //        }
     //    }
     //}
+    private void Update()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            if (transform.position.y < -10f)
+            {
+                PhotonNetwork.Destroy(gameObject);
+            }
+        }
+    }
 }

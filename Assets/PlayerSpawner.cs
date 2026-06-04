@@ -14,20 +14,24 @@ public class PlayerSpawner : MonoBehaviour
 
     private IEnumerator SpawnPlayerCoroutine()
     {
-        // THE FIX: Wait until the client is fully in the room AND Photon has unpaused the network queue.
-        // If we spawn while the queue is paused, other players will never receive the spawn message!
+        // Wait until the client is fully in the room AND Photon has unpaused the network queue.
         while (!PhotonNetwork.InRoom || !PhotonNetwork.IsMessageQueueRunning)
         {
-            yield return null; // Wait for the next frame and check again
+            yield return null;
         }
 
-        // Now that the network is fully unpaused, we can safely spawn!
         GameObject[] possibleSpawns = GameObject.FindGameObjectsWithTag("SpawnPointTag");
-        Transform spawnPoint = possibleSpawns[UnityEngine.Random.Range(0, possibleSpawns.Length)]?.transform;
 
-        if (spawnPoint != null)
+        if (possibleSpawns.Length > 0)
         {
-            GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+            // FIX: Seed the random number generator using the current system time ticks
+            UnityEngine.Random.InitState((int)System.DateTime.Now.Ticks);
+
+            // Pick a random index now that the seed is randomized
+            int randomIndex = UnityEngine.Random.Range(0, possibleSpawns.Length);
+            Transform spawnPoint = possibleSpawns[randomIndex].transform;
+
+            PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
         }
         else
         {

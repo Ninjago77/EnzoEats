@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Photon.Pun;
 using UnityEngine;
+using TMPro; // 1. Added TMPro namespace
 
 public class PlayerSetup : MonoBehaviourPun
 {
@@ -12,20 +13,25 @@ public class PlayerSetup : MonoBehaviourPun
     public MouseYCam mouseYCam;
     public MainHandTakeover mainHandTakeover;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //public void YesLocalPlayer()
-    //{
-    //    playerMovement.enabled = true;
-    //    mouseXPlay.enabled = true;
-    //    mouseYCam.enabled = true;
-    //    mainCamera.SetActive(true);
-    //}
+    [Header("UI / Name Tag")]
+    public TextMeshPro nameTagText; // 2. Reference to the 3D TextMeshPro component
 
     void Start()
     {
-        //PhotonNetwork.Instantiate("Food", new Vector3(transform.position.x, 5, transform.position.z), Quaternion.identity);
+        // Set the nickname text
+        if (nameTagText != null)
+        {
+            if (photonView.Owner != null && !string.IsNullOrEmpty(photonView.Owner.NickName))
+            {
+                nameTagText.text = photonView.Owner.NickName;
+            }
+            else
+            {
+                // Fallback in case a nickname isn't set yet
+                nameTagText.text = "Player " + photonView.OwnerActorNr;
+            }
+        }
 
-        // 3. Check if this specific player object belongs to the person running the game
         if (photonView.IsMine)
         {
             // This is YOU. Enable controls.
@@ -34,6 +40,12 @@ public class PlayerSetup : MonoBehaviourPun
             mouseYCam.enabled = true;
             mainHandTakeover.enabled = true;
             mainCamera.SetActive(true);
+
+            // Hide your own name tag so it doesn't float in front of your camera view
+            if (nameTagText != null)
+            {
+                nameTagText.gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -43,7 +55,22 @@ public class PlayerSetup : MonoBehaviourPun
             mouseYCam.enabled = false;
             mainHandTakeover.enabled = false;
             mainCamera.SetActive(false);
+
+            // Ensure remote players have their name tags visible
+            if (nameTagText != null)
+            {
+                nameTagText.gameObject.SetActive(true);
+            }
         }
     }
 
+    // 3. Keep remote name tags facing the active local camera
+    void LateUpdate()
+    {
+        // Only run this for other players, using the active Main Camera
+        if (!photonView.IsMine && nameTagText != null && Camera.main != null)
+        {
+            nameTagText.transform.forward = Camera.main.transform.forward;
+        }
+    }
 }
