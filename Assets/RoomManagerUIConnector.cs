@@ -19,6 +19,16 @@ public class RoomManagerUIConnector : MonoBehaviour
         {
             joinButton.onClick.AddListener(OnJoinClicked);
 
+            if (!string.IsNullOrEmpty(RoomManager.Instance.roomCodestr))
+            {
+                roomCodeInputField.text = RoomManager.Instance.roomCodestr;
+            }
+
+            if (!string.IsNullOrEmpty(RoomManager.Instance.nicknamestr))
+            {
+                nicknameInputField.text = RoomManager.Instance.nicknamestr;
+            }
+
             // Check if we are already connected to the lobby
             if (!PhotonNetwork.InLobby)
             {
