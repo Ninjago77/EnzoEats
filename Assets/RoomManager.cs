@@ -8,8 +8,7 @@ using System;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
-    public GameObject player;
-    private Transform spawnPoint;
+
     private static bool hasConnectedOnce = false;
     public string roomCodestr;
     public string nicknamestr;
@@ -152,17 +151,18 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         if (scene.name == "SchoolCafeteriaMap")
         {
-            Transform spawnPoint = GameObject.FindWithTag("SpawnPointTag")?.transform;
+            //GameObject[] possibleSpawns = GameObject.FindGameObjectsWithTag("SpawnPointTag");
+            //Transform spawnPoint = possibleSpawns[UnityEngine.Random.Range(0, possibleSpawns.Length)]?.transform;
 
-            if (spawnPoint != null)
-            {
-                GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
-                // _player.GetComponent<PlayerSetup>().YesLocalPlayer();
-            }
-            else
-            {
-                Debug.LogError("SpawnPointTag not found in the loaded scene!");
-            }
+            //if (spawnPoint != null)
+            //{
+            //    GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+            //    // _player.GetComponent<PlayerSetup>().YesLocalPlayer();
+            //}
+            //else
+            //{
+            //    Debug.LogError("SpawnPointTag not found in the loaded scene!");
+            //}
         }
     }
 }

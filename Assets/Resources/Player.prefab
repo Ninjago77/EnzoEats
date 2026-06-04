@@ -90,7 +90,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: -0.646, y: 0, z: 0}
+  m_Center: {x: -0.323, y: 0, z: 0}
 --- !u!1 &2598359382991157040
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 4259323761913873087}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
   walkSpeed: 2
   sprintSpeed: 4
   maxVelocityChange: 7
-  jumpHeight: 1
+  jumpHeight: 0.5
 --- !u!54 &5061456213039822686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -443,7 +443,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &797880874336241897
 MonoBehaviour:
