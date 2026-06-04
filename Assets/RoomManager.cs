@@ -4,6 +4,7 @@ using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Windows;
+using System;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -14,6 +15,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public string nicknamestr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public static RoomManager Instance { get; private set; }
+
+    public event Action OnJoinedLobbyEvent;
 
     private void Awake()
     {
@@ -63,7 +66,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
             Debug.Log("P/Connecting for the first time...");
             PhotonNetwork.ConnectUsingSettings();
             //hasConnectedOnce = true; // Set to true so it never runs again
-            FindAnyObjectByType<Camera>().enabled = false;
+            //FindAnyObjectByType<Camera>().enabled = false;
         }
         else
         {
@@ -94,7 +97,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         if (!hasConnectedOnce)
         {
-            FindAnyObjectByType<Camera>().enabled = true;
+            //FindAnyObjectByType<Camera>().enabled = true;
             hasConnectedOnce = true;
         }
 
@@ -103,6 +106,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
         //roomOptions.PublishUserId = true;
 
         //PhotonNetwork.JoinOrCreateRoom("test", roomOptions, null, null);
+
+        // Fire the event to tell the UI Connector to hide the Loading Panel!
+        OnJoinedLobbyEvent?.Invoke();
 
     }
     
