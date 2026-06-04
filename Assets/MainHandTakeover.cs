@@ -12,33 +12,49 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
     public SphereCollider sphereCollider;
     private List<GameObject> objectsInRange = new List<GameObject>();
     public string[] prefabList;
-    //public ContactTakeover contactTakeover;
     public MainHandSetup mainHandSetup;
     public GameObject pickedUpObject;
-    //public KillItem killItem;
-    // Register callbacks so PUN tells this script when ownership shifts
+
+    // Instantly track inventory locally to avoid E & Q delay and duplicate drops
+    private int currentInventoryItem = -1;
+    // Safely track objects waiting to be destroyed on server confirmation
+    private List<GameObject> pendingDestroys = new List<GameObject>();
+
     private void OnEnable() => PhotonNetwork.AddCallbackTarget(this);
     private void OnDisable() => PhotonNetwork.RemoveCallbackTarget(this);
+
     private void Start()
     {
-        resetInv();
+        // Add a check so joining players don't reset the host's inventory
+        if (photonView.IsMine)
+        {
+            resetInv();
+        }
     }
 
     private void resetInv()
     {
+        if (!photonView.IsMine) return;
+
+        currentInventoryItem = -1;
         Hashtable props = new Hashtable();
-        props["inventory"] = new int[] { -1, -1, -1 };
+        int[] inv = new int[] { -1, -1, -1 };
+        props["inventory"] = inv;
         PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+
+        // Instantly update our visual skin without waiting for server return trip
+        if (mainHandSetup != null) mainHandSetup.UpdateItemSkin(inv);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!photonView.IsMine) return;
 
-        if (other.gameObject == pickedUpObject) return;
-
-        if (FindFoodParent(other.gameObject) != null)
+        GameObject foodParent = FindFoodParent(other.gameObject);
+        if (foodParent != null)
         {
+            // Ignore objects we just picked up or are waiting to be destroyed
+            if (foodParent == pickedUpObject || pendingDestroys.Contains(foodParent)) return;
             UpdateObjectsInRange();
         }
     }
@@ -47,10 +63,10 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
     {
         if (!photonView.IsMine) return;
 
-        if (other.gameObject == pickedUpObject) return;
-
-        if (FindFoodParent(other.gameObject) != null)
+        GameObject foodParent = FindFoodParent(other.gameObject);
+        if (foodParent != null)
         {
+            if (foodParent == pickedUpObject || pendingDestroys.Contains(foodParent)) return;
             UpdateObjectsInRange();
         }
     }
@@ -63,7 +79,8 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
         {
             if (objectsInRange.Count > 0)
             {
-                if (((int[])photonView.Owner.CustomProperties["inventory"])[0] != -1)
+                // Rely on local instant state rather than network-delayed custom properties
+                if (currentInventoryItem != -1)
                 {
                     drop();
                 }
@@ -73,7 +90,7 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
 
         if (Input.GetButtonDown("Drop"))
         {
-            if (((int[])photonView.Owner.CustomProperties["inventory"])[0] != -1)
+            if (currentInventoryItem != -1)
             {
                 drop();
             }
@@ -86,86 +103,40 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
     }
 
     void drop()
-
     {
-        PhotonNetwork.Instantiate(prefabList[((int[])photonView.Owner.CustomProperties["inventory"])[0]], transform.position, transform.rotation);
+        PhotonNetwork.Instantiate(prefabList[currentInventoryItem], transform.position, transform.rotation);
         resetInv();
-        
-        //pickedUpObject.transform.SetParent(null);
-
-
-
-        //foreach (MeshCollider meshCol in pickedUpObject.GetComponentsInChildren<MeshCollider>())
-        //{
-        //    meshCol.enabled = true;
-        //}
-
-        //pickedUpObject.GetComponent<PhotonTransformView>().enabled = true;
-        //pickedUpObject.GetComponent<Rigidbody>().isKinematic = false;
-        //pickedUpObject.GetComponent<Rigidbody>().WakeUp();
-        //pickedUpObject = null;
     }
-    //private void OnEnable() => PhotonNetwork.AddCallbackTarget(this);
-    //private void OnDisable() => PhotonNetwork.RemoveCallbackTarget(this);
+
     void pickUp()
     {
         pickedUpObject = objectsInRange[0];
         objectsInRange.RemoveAt(0);
 
         PhotonView foodView = pickedUpObject.GetComponent<PhotonView>();
+        currentInventoryItem = pickedUpObject.GetComponent<FoodSetup>().itemIndex;
 
         // 2. Write data to custom properties immediately
         Hashtable props = new Hashtable();
-        props["inventory"] = new int[] { pickedUpObject.GetComponent<FoodSetup>().itemIndex, -1, -1 };
+        int[] inv = new int[] { currentInventoryItem, -1, -1 };
+        props["inventory"] = inv;
         PhotonNetwork.LocalPlayer.SetCustomProperties(props);
 
+        // Instant visual update locally
+        if (mainHandSetup != null) mainHandSetup.UpdateItemSkin(inv);
+
         // 3. Request ownership. We DO NOT destroy it yet. 
-        // We wait for OnOwnershipTransfered to trigger.
         if (foodView != null && !foodView.IsMine)
         {
+            pendingDestroys.Add(pickedUpObject);
             foodView.RequestOwnership();
         }
         else if (foodView != null && foodView.IsMine)
         {
             // If we already happen to own it, destroy it immediately safely
             PhotonNetwork.Destroy(pickedUpObject);
-            pickedUpObject = null;
+            // We leave pickedUpObject assigned so it gets skipped in subsequent UpdateObjectsInRange calls
         }
-        //ContactTakeover contactTakeover = pickedUpObject.GetComponent<ContactTakeover>();
-        //contactTakeover.CheckAndTakeover(transform.parent.gameObject,"death");
-
-
-
-        //    StartCoroutine(pickUpWait());
-        //}
-
-        //System.Collections.IEnumerator pickUpWait()
-        //{
-        //    float timeout = 3f;
-        //    float elapsed = 0f;
-
-        //    while (pickedUpObject != null &&
-        //           pickedUpObject.GetComponent<PhotonView>()?.Owner?.UserId !=
-        //           photonView?.Owner?.UserId)
-        //    {
-        //        elapsed += Time.deltaTime;
-        //        if (elapsed >= timeout)
-        //        {
-        //            Debug.LogWarning("Pickup timed out - ownership transfer failed");
-        //            pickedUpObject = null;
-        //            yield break;
-        //        }
-        //        yield return null;
-        //    }
-
-        //    if (pickedUpObject == null) yield break;
-
-        //Hashtable props = new Hashtable();
-        //props["inventory"] = new int[] { pickedUpObject.GetComponent<FoodSetup>().itemIndex, -1, -1 };
-        //PhotonNetwork.LocalPlayer.SetCustomProperties(props);
-
-        //PhotonNetwork.Destroy(pickedUpObject);
-        //pickedUpObject = null;
     }
 
     private void UpdateObjectsInRange()
@@ -179,7 +150,8 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
 
         objectsInRange = hitColliders
             .Select(col => FindFoodParent(col.gameObject))
-            .Where(foodParent => foodParent != null && foodParent != pickedUpObject)
+            // Filter out items that are currently pending network destruction
+            .Where(foodParent => foodParent != null && foodParent != pickedUpObject && !pendingDestroys.Contains(foodParent))
             .Distinct()
             .OrderBy(foodParent => Vector3.Distance(center, foodParent.transform.position))
             .ToList();
@@ -199,32 +171,21 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
         return null;
     }
 
-
-    //public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer) { }
-
-    //public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
-    //{
-    //    // If this script's player just successfully gained ownership of the picked up item
-    //    if (pickedUpObject != null && targetView == pickedUpObject.GetComponent<PhotonView>() && targetView.IsMine)
-    //    {
-    //        PhotonNetwork.Destroy(pickedUpObject);
-    //    }
-    //}
-
-    //public void OnOwnershipTransferFailed(PhotonView targetView, Player senderOfFailedRequest) { }
-
-    // --- IPunOwnershipCallbacks Implementation ---
-
     public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer) { }
 
     public void OnOwnershipTransfered(PhotonView targetView, Player previousOwner)
     {
-        // This checks if the item we are currently trying to pick up 
-        // successfully became ours on the network.
-        if (pickedUpObject != null && targetView == pickedUpObject.GetComponent<PhotonView>() && targetView.IsMine)
+        if (targetView == null || targetView.gameObject == null) return;
+
+        // Verify if any object we spammed pick up on finally transferred ownership
+        if (pendingDestroys.Contains(targetView.gameObject) && targetView.IsMine)
         {
-            PhotonNetwork.Destroy(pickedUpObject);
-            pickedUpObject = null; // Clean up local pointer reference
+            pendingDestroys.Remove(targetView.gameObject);
+            PhotonNetwork.Destroy(targetView.gameObject);
+            if (pickedUpObject == targetView.gameObject)
+            {
+                pickedUpObject = null;
+            }
         }
     }
 
