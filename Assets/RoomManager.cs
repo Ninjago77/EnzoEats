@@ -34,12 +34,15 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     public override void OnEnable()
     {
+        base.OnEnable();
+
         // 2. Subscribe to Unity's scene loaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public override void OnDisable()
     {
+        base.OnDisable();
         // 3. Unsubscribe to clean up memory
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
