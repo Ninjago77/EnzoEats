@@ -1,6 +1,6 @@
 # EnzoEats
 A FPS shooter-esque multiplayer meele & ranged food fight game, where you just pummel your friends with random foods you find on the floor.
-Download at:- https://ninjago77.itch.io/enzoeats
+Download at:- https://ninjago77.itch.io/enzoeats or https://github.com/Ninjago77/EnzoEats/releases/tag/v0.1.0
 ## Controls
 WASD: Movement
 Shift: Sprint
