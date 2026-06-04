@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: itemIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7644327119265591091, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
+      propertyPath: itemDamage
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 9198293500564736953, guid: 73cc2483ca52c7f4f9dbbccf17be18ef, type: 3}
       propertyPath: sceneViewId
       value: 0

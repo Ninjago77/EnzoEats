@@ -69,7 +69,9 @@ MonoBehaviour:
   - HotdogKnife Variant
   - TomatoBlinder Variant
   mainHandSetup: {fileID: 2292521074954774518}
+  playerCamera: {fileID: 7456966376398260353}
   pickedUpObject: {fileID: 0}
+  clickForceMagnitude: 6
 --- !u!135 &5104825033327185970
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -417,7 +419,12 @@ MonoBehaviour:
   walkSpeed: 2
   sprintSpeed: 4
   maxVelocityChange: 7
-  jumpHeight: 0.5
+  jumpHeight: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  GroundCheckRadius: 0.7
+  GroundCheckOffset: 0.5
 --- !u!54 &5061456213039822686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -589,4 +596,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 0.08, z: 0.61}
-  m_Center: {x: 0, y: -0.01, z: 0}
+  m_Center: {x: 0, y: -0.02, z: 0}

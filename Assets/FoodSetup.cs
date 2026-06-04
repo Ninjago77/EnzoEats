@@ -4,6 +4,7 @@ using Photon.Pun;
 public class FoodSetup : MonoBehaviour
 {
     public int itemIndex = -1;
+    public float itemDamage = 69f;
     //[PunRPC]
     //public void RequestDestroyObject(int viewID)
     //{

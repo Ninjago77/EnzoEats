@@ -228,9 +228,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5997756028227246541, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
       propertyPath: m_Name
       value: room-small-variation (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2860286493000814925, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -297,9 +305,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -357,6 +373,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
       propertyPath: m_Name
       value: corridor-end (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -533,9 +557,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -743,9 +775,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -835,6 +875,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-end (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -888,9 +936,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -945,9 +1001,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -613763925390802421, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
       propertyPath: m_Name
       value: corridor-transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1194,6 +1258,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-end (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1247,9 +1319,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1308,6 +1388,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: room-wide-variation
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 702ec417e574fa341bf72032675d0b88, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567571823474185680, guid: 702ec417e574fa341bf72032675d0b88, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1364,6 +1452,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
       propertyPath: m_Name
       value: corridor-junction (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020557909816924571, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1449,9 +1545,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1567,9 +1671,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1624,9 +1736,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1791,9 +1911,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5749448238498364724, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1864,6 +1992,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-junction (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020557909816924571, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1917,9 +2053,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1974,9 +2118,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5749448238498364724, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2043,9 +2195,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2161,9 +2321,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2222,6 +2390,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: room-large
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d9e7e05e8382da478f9107a78f677db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814133269196942891, guid: 1d9e7e05e8382da478f9107a78f677db, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2275,9 +2451,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5749448238498364724, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2344,9 +2528,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2401,9 +2593,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5749448238498364724, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2501,9 +2701,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2623,6 +2831,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-end
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2707,9 +2923,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2764,9 +2988,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2825,6 +3057,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-end (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2878,73 +3118,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
---- !u!1001 &1353871820
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.029691875
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.000000072326316
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.1390705
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-      propertyPath: m_Name
-      value: template-floor-detail-a (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 288841816653755696, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f7dc8ed7a044eb54ba21e56978913cab, type: 3}
 --- !u!1001 &1375193165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2996,6 +3186,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
       propertyPath: m_Name
       value: corridor-junction
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020557909816924571, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3050,9 +3248,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3107,9 +3313,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3199,6 +3413,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-end (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371627828792983613, guid: ecc6c38a16fa77e44bb5175e53fb5a0d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3252,9 +3474,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3309,9 +3539,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -613763925390802421, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
       propertyPath: m_Name
       value: corridor-transition (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8132fd2d22a7df540bf89f0cde07fbab, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3483,6 +3721,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: corridor-wide
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 54e82b4387878bf4b858925c2fd75ee9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840214502671938835, guid: 54e82b4387878bf4b858925c2fd75ee9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3536,9 +3782,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3699,9 +3953,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3756,9 +4018,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5997756028227246541, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
       propertyPath: m_Name
       value: room-small-variation
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 786bfdeed3e18574c9c98ec840e48fc3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3874,9 +4144,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3931,9 +4209,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3991,6 +4277,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
       propertyPath: m_Name
       value: corridor-junction (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020557909816924571, guid: 1658b18b010593045930138cc12e67af, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4076,9 +4370,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8547323417521046297, guid: 525b458d9c23128489951234330b21bb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 525b458d9c23128489951234330b21bb, type: 3}
       propertyPath: m_Name
       value: corridor-intersection
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 525b458d9c23128489951234330b21bb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4255,9 +4557,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7708252926751876376, guid: 08884afd13dafb34a8cb146b46bdd4a5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 08884afd13dafb34a8cb146b46bdd4a5, type: 3}
       propertyPath: m_Name
       value: room-wide
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 08884afd13dafb34a8cb146b46bdd4a5, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4373,9 +4683,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -52362624466402725, guid: b69869a5aa473924aa62f10993cd1ffd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b69869a5aa473924aa62f10993cd1ffd, type: 3}
       propertyPath: m_Name
       value: room-small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b69869a5aa473924aa62f10993cd1ffd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4430,9 +4748,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4487,9 +4813,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6885012999544025740, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
       propertyPath: m_Name
       value: corridor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b17a176f15cba584c8bb58dbe89ff211, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4544,9 +4878,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4662,9 +5004,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2316541679519566831, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
       propertyPath: m_Name
       value: corridor-corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ff9454e991eea1469573916a601d0ca, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4702,7 +5052,6 @@ SceneRoots:
   - {fileID: 424443340}
   - {fileID: 648875499}
   - {fileID: 1658485315}
-  - {fileID: 1353871820}
   - {fileID: 2006057030}
   - {fileID: 2100235131}
   - {fileID: 77117920}

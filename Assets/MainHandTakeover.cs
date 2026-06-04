@@ -13,7 +13,10 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
     private List<GameObject> objectsInRange = new List<GameObject>();
     public string[] prefabList;
     public MainHandSetup mainHandSetup;
+    public Camera playerCamera;
     public GameObject pickedUpObject;
+    public float clickForceMagnitude = 1.0f;
+    private float clickForce = 1.0f;
 
     // Instantly track inventory locally to avoid E & Q delay and duplicate drops
     private int currentInventoryItem = -1;
@@ -99,6 +102,11 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
         if (Input.GetButtonDown("Fire1"))
         {
             ; // HUMAN ME LISTEN TO ME FIRE OR LEFT CLICK HERE
+            // clickForce from click on to click off later here
+            if (currentInventoryItem != -1)
+            {
+                MainFire();
+            }
         }
     }
 
@@ -106,6 +114,14 @@ public class MainHandTakeover : MonoBehaviourPun, IPunOwnershipCallbacks
     {
         PhotonNetwork.Instantiate(prefabList[currentInventoryItem], transform.position, transform.rotation);
         resetInv();
+    }
+
+    void MainFire()
+    {
+        GameObject obj = PhotonNetwork.Instantiate(prefabList[currentInventoryItem], transform.position, transform.rotation);
+        resetInv();
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        rb.AddForce(playerCamera.transform.forward.normalized*clickForce*clickForceMagnitude,ForceMode.Impulse);
     }
 
     void pickUp()

@@ -17,19 +17,40 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping = false;
 
     private bool isGrounded = false;
-    private int jumpCount = 0;
+
+    [Header("Ground Check Settings")]
+    public LayerMask groundLayer; // Set this to your ground's layer in the Inspector!
+    public float GroundCheckRadius = 0.3f;
+    public float GroundCheckOffset = 0.1f;
+    //private int jumpCount = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        isGrounded = true;
-        jumpCount = 0;
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other is MeshCollider)
+    //    {
+    //        isGrounded = true;
+    //    }
+    //}
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider is MeshCollider)
+    //    {
+    //        isGrounded = true;
+    //    }
+    //}
 
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other is MeshCollider)
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
     // Update is called once per frame
     void Update()
     {
@@ -37,22 +58,35 @@ public class PlayerMovement : MonoBehaviour
         input.Normalize();
 
         isSprinting = Input.GetButton("Sprint");
-        isJumping = Input.GetButton("Jump");
+        isJumping = Input.GetButtonDown("Jump");
     }
 
     private void FixedUpdate()
     {
-        if (isJumping)
+        Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y + GroundCheckOffset, transform.position.z);
+        isGrounded = Physics.CheckSphere(spherePosition, GroundCheckRadius, groundLayer);
+        if (isJumping && isGrounded)
         {
             //rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpHeight, rb.linearVelocity.z);
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y + (jumpHeight/(Mathf.Pow(2f,jumpCount))), rb.linearVelocity.z);
+            //rb.linearVelocity = new Vector3(rb.linearVelocity.x, rb.linearVelocity.y + (jumpHeight/(Mathf.Pow(2f,jumpCount))), rb.linearVelocity.z);
             //rb.linearVelocity = new Vector3(rb.linearVelocity.x, Mathf.Sqrt((2f * Mathf.Abs(Physics.gravity.y) * jumpHeight) + (Mathf.Pow(Mathf.Max(0f, rb.linearVelocity.y), 2f) / 2f)), rb.linearVelocity.z);
-            isGrounded = false;
-            jumpCount++;
+            //isGrounded = false;
+            //jumpCount++;
+
+            // 1. Reset current vertical velocity so jumps are consistent (prevents super-jumps on slopes)
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+            // 2. Use the exact physics formula to reach the desired height (from your comments!)
+            float jumpForce = Mathf.Sqrt(2f * Mathf.Abs(Physics.gravity.y) * jumpHeight);
+
+            // 3. Apply the force instantly
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+
+            isJumping = false;
         }
 
         //if (input.magnitude > 0.5f) {
-            rb.AddForce(CalculateMovement((isSprinting && isGrounded) ? sprintSpeed : walkSpeed), ForceMode.VelocityChange);
+          rb.AddForce(CalculateMovement((isSprinting && isGrounded) ? sprintSpeed : walkSpeed), ForceMode.VelocityChange);
         //} 
         //else
         //{
